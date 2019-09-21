@@ -140,7 +140,7 @@ a:focus {
 	font-family: paralucent, sans-serif;
 	font-size: 6rem;
 	color: var(--color-deco);
-	bottom: calc(100% - 1.6rem);
+	bottom: calc(100% - 1.2rem);
 }
 .text1::before {
   content: '做';
