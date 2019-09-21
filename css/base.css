@@ -1,0 +1,285 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+p {
+  margin: 4px;
+  text-align: center
+}
+:root {
+	font-size: 17px;
+}
+
+body {
+	margin: 0;
+	--color-text: #1c1b1b;
+	/* --color-bg: #ddcfc7; */
+	--color-bg: #ddcfc7;
+	--color-link: #b07656;
+	--color-link-hover: #000;
+	--color-deco: #ee4b7c;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: paralucent, sans-serif;
+	font-family: quiroh, sans-serif;
+	font-family: mr-eaves-xl-sans, sans-serif;
+}
+
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+/* .articleText {
+  font-size: 20px;
+} */
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: var(--color-link-hover);
+	outline: none;
+}
+
+[data-scroll] {
+	will-change: transform;
+}
+
+.frame {
+	padding: 2.5rem 3rem;
+	position: absolute;
+	z-index: 10;
+}
+
+.frame__title {
+	font-size: 1rem;
+	margin: 0 0 1.5rem;
+}
+
+.frame__links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.frame a {
+	margin: 0.25rem 0;
+	text-transform: lowercase;
+}
+
+.frame__github,
+.frame__links a:not(:last-child),
+.frame__demos a:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.frame__demos {
+	margin: 1rem 0;
+}
+
+.frame__demo--current,
+.frame__demo--current:hover {
+	color: var(--color-text);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	padding: 10rem 0;
+	counter-reset: figure; 
+}
+
+.item {
+	margin: 10vh auto;
+	max-width: 100%;
+	position: relative;
+	will-change: transform;
+}
+
+.item::before {
+	/* counter-increment: figure; */
+	/* content: counter(figure, decimal-leading-zero); */
+	content: '安';
+	position: absolute;
+	font-family: paralucent, sans-serif;
+	font-size: 6rem;
+	color: var(--color-deco);
+	bottom: calc(100% - 1.6rem);
+}
+.text1::before {
+  content: '做';
+}
+.text2::before {
+  content: '我';
+}
+.text3::before {
+  content: '女';
+}
+.text4::before {
+  content: '朋';
+}
+.text5::before {
+  content: '友';
+}
+.text6::before {
+  content: '吧';
+}
+.text7::before {
+  content: '❤️';
+}
+
+.item:nth-child(even)::before {
+	right: 0;
+}
+
+.item__img-wrap {
+	--aspect-ratio: 1/1.5;
+	overflow: hidden;
+	width: 500px;
+	margin: 0 auto;
+	padding-bottom: calc(100% / (var(--aspect-ratio)));
+	max-width: calc(100% - 2rem);
+	will-change: transform;
+}
+
+.item:first-child .item__img-wrap {
+  /* width: 1000px; */
+	--aspect-ratio: 120/80;
+	--image: url(../img/10.jpg);
+}
+
+.item:nth-child(2) .item__img-wrap {
+  /* width: 1000px; */
+  --aspect-ratio: 140/66;
+  --image: url(../img/11.png);
+  background-size: 100% 100%;
+	/* --aspect-ratio: 8/10;
+	--image: url(../img/1.jpg); */
+}
+
+.item:nth-child(3) .item__img-wrap {
+	--aspect-ratio: 60/70;
+	--image: url(../img/15.png);
+}
+
+.item:nth-child(4) .item__img-wrap {
+	width: 800px;
+	--aspect-ratio: 900/700;
+	--image: url(../img/14.png);
+}
+
+.item:nth-child(5) .item__img-wrap {
+		width: calc(100vw - 2rem);
+	--aspect-ratio: 60/75;
+  --image: url(../img/12.png);
+  background-position: 0% 0%;
+}
+
+.item:nth-child(6) .item__img-wrap {
+  --aspect-ratio: 6/5;
+	--image: url(../img/13.png);
+
+}
+
+.item:nth-child(7) .item__img-wrap {
+	width: 900px;
+	--aspect-ratio: 1000/749;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/7.jpg);
+}
+
+.item:nth-child(8) .item__img-wrap {
+	width: 900px;
+	--aspect-ratio: 1000/562;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/8.jpg);
+}
+
+.item:nth-child(9) .item__img-wrap {
+	--aspect-ratio: 60/75;
+	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/9.jpg);
+}
+
+.item__img {
+	--overflow: 40px;
+	height: calc(100% + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+	width: 100%;
+	position: absolute;
+	background-image: var(--image);
+	background-size: cover;
+	background-size: 100% 100%;
+	background-position: 50% 0%;
+	will-change: transform;
+}
+
+.item__img--t1 {
+	--overflow: 60px;
+}
+
+.item__img--t2 {
+	--overflow: 80px;
+}
+
+.item__img--t3 {
+	--overflow: 120px;
+}
+
+.item__caption {
+	padding: 2rem 1rem;
+}
+
+.item__caption-title {
+	font-family: paralucent, sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
+	margin: 0;
+}
+
+.item__caption-copy {
+	margin: 0;
+}
+
+.item__caption-copy::before {
+	content: '❤️👫❤️';
+	line-height: 1;
+	color: var(--color-link);
+	font-weight: 700;
+	font-size: 1rem;
+	/* margin: 0 0 1rem; */
+	display: block;
+}
