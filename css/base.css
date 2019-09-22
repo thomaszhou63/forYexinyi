@@ -181,7 +181,7 @@ a:focus {
 .item:first-child .item__img-wrap {
   /* width: 1000px; */
 	--aspect-ratio: 120/80;
-	--image: url(../img/10.jpg);
+	--image: url(../img/10.png);
 }
 
 .item:nth-child(2) .item__img-wrap {
@@ -217,7 +217,7 @@ a:focus {
 
 }
 
-.item:nth-child(7) .item__img-wrap {
+/* .item:nth-child(7) .item__img-wrap {
 	width: 900px;
 	--aspect-ratio: 1000/749;
 	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/7.jpg);
@@ -232,7 +232,7 @@ a:focus {
 .item:nth-child(9) .item__img-wrap {
 	--aspect-ratio: 60/75;
 	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/9.jpg);
-}
+} */
 
 .item__img {
 	--overflow: 40px;
