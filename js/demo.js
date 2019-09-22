@@ -210,7 +210,7 @@
     // Preload images
     const preloadImages = () => {
         return new Promise((resolve, reject) => {
-            imagesLoaded(document.querySelectorAll('.item__img'), {background: true}, resolve);
+            imagesLoaded(document.querySelectorAll('.item__img_loading'), {background: true}, resolve);
         });
     };
     
