@@ -205,7 +205,7 @@ a:focus {
 }
 
 .item:nth-child(5) .item__img-wrap {
-		width: calc(100vw - 2rem);
+		width: calc(100vw - 0rem);
 	--aspect-ratio: 60/75;
   --image: url(../img/12.png);
   background-position: 0% 0%;
